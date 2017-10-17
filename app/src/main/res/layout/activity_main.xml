@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context="com.why.project.tabbottomfragmentlayoutdemo.MainActivity">
+
+    <!-- 碎片切换区域 -->
+    <FrameLayout
+        android:id="@+id/center_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+
+    <!-- 底部选项卡区域 -->
+    <LinearLayout
+        android:id="@+id/tab_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_bottom_background_height"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cfcfcf">
+        </View>
+
+        <!-- 使用自定义的LinearLayout类 -->
+        <com.why.project.tabbottomfragmentlayoutdemo.views.tab.TabBottomFragmentLayout
+            android:id="@+id/bottomtab_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent"
+            />
+    </LinearLayout>
+</LinearLayout>
