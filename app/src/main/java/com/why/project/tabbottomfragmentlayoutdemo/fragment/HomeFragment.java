@@ -20,13 +20,6 @@ public class HomeFragment extends BaseFragment{
 	/**传递过来的参数*/
 	private String showTitle;
 
-	/**传递参数的写法*/
-	public static HomeFragment getInstance(String showTitle){
-		HomeFragment fragment = new HomeFragment();
-		fragment.showTitle = showTitle;
-		return fragment;
-	}
-
 	//重写
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 		myView = inflater.inflate(R.layout.fragment_home_home, container, false);

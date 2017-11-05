@@ -110,7 +110,7 @@ public class MainActivity extends FragmentActivity {
 		switch (checkedIndex) {
 			case Home_Fragment_Index:
 				if(homeFragment == null){
-					homeFragment = HomeFragment.getInstance("这个是传递参数的写法");
+					homeFragment = HomeFragment.getInstance(HomeFragment.class,null);
 					transcation.add(R.id.center_layout, homeFragment);
 				}else{
 					transcation.show(homeFragment);
@@ -118,7 +118,7 @@ public class MainActivity extends FragmentActivity {
 				break;
 			case Message_Fragment_Index:
 				if(messageFragment == null){
-					messageFragment = new MessageFragment();
+					messageFragment = MessageFragment.getInstance(MessageFragment.class,null);
 					transcation.add(R.id.center_layout, messageFragment);
 				}else{
 					transcation.show(messageFragment);
@@ -126,7 +126,7 @@ public class MainActivity extends FragmentActivity {
 				break;
 			case Contact_Fragment_Index:
 				if(contactFragment == null){
-					contactFragment = new ContactFragment();
+					contactFragment = ContactFragment.getInstance(ContactFragment.class,null);
 					transcation.add(R.id.center_layout, contactFragment);
 				}else{
 					transcation.show(contactFragment);
